@@ -1,5 +1,5 @@
 # Rock Paper Scissors Game | Day 4 of 100 Days Of Code
-# A very simple version of the game... I did'nt want to waste much time on this.
+# A very simple version of the game... I didn't want to waste much time on this.
 
 import random
 
