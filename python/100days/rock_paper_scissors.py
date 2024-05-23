@@ -13,24 +13,30 @@ if comp_ch == 0:
         print("You had a draw")
     elif choice == 1:
         print("User won")
-    else:
+    elif choice == 2:
         print("Computer won")
+    else:
+        print("Invalid Input")
+        exit()
 elif comp_ch == 1:
     print("Computer chose paper")
     if choice == 0:
         print("Computer won")
     elif choice == 1:
         print("Draw")
-    else:
+    elif choice == 2:
         print("User won")
+    else:
+        print("Invalid Input")
+        exit()
 elif comp_ch == 2:
     print("Computer chose Scissors")
     if choice == 0:
         print("User won")
     elif choice == 1:
         print("Computer won")
-    else:
+    elif choice == 2:
         print("Draw")
-else:
-    print("Invalid Input")
-    exit()
+    else:
+        print("Invalid Input")
+        exit()
