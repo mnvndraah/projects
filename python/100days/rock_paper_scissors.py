@@ -1,42 +1,28 @@
-# Rock Paper Scissors Game | Day 4 of 100 Days Of Code
-# A very simple version of the game... I didn't want to waste much time on this.
-
 import random
 
-choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper, 2 for Scissors : "))
+# Get user choice and validate input
+try:
+    choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper, 2 for Scissors: "))
+    if choice not in [0, 1, 2]:
+        raise ValueError
+except ValueError:
+    print("Invalid Input. Please enter 0, 1, or 2.")
+    exit()
 
-comp_ch = random.randint(0,2)
+# Generate computer choice
+comp_ch = random.randint(0, 2)
 
-if comp_ch == 0:
-    print("Computer chose rock")
-    if choice == 0:
-        print("You had a draw")
-    elif choice == 1:
-        print("User won")
-    elif choice == 2:
-        print("Computer won")
-    else:
-        print("Invalid Input")
-        exit()
-elif comp_ch == 1:
-    print("Computer chose paper")
-    if choice == 0:
-        print("Computer won")
-    elif choice == 1:
-        print("Draw")
-    elif choice == 2:
-        print("User won")
-    else:
-        print("Invalid Input")
-        exit()
-elif comp_ch == 2:
-    print("Computer chose Scissors")
-    if choice == 0:
-        print("User won")
-    elif choice == 1:
-        print("Computer won")
-    elif choice == 2:
-        print("Draw")
-    else:
-        print("Invalid Input")
-        exit()
+# Define choices
+choices = ["Rock", "Paper", "Scissors"]
+
+# Print choices
+print(f"You chose {choices[choice]}")
+print(f"Computer chose {choices[comp_ch]}")
+
+# Determine winner
+if comp_ch == choice:
+    print("It's a draw!")
+elif (choice == 0 and comp_ch == 2) or (choice == 1 and comp_ch == 0) or (choice == 2 and comp_ch == 1):
+    print("You won!")
+else:
+    print("Computer won!")
