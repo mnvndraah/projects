@@ -4,10 +4,10 @@ This repository's purpose is to just contain all the projects I did on my way.
 
 ## My current goals to get into this field.
 
-- [] Python - Advanced
+- [ ] Python - Advanced
 - [x] Networking
-- [] C and C++
-- [] sql and js
+- [ ] C and C++
+- [ ] sql and js
 
 ### Recommendations are appreciated.
 
