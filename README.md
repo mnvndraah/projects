@@ -1,9 +1,16 @@
-# Welcome to my collection of projects
+# Welcome to my collection of projects.
 
 This repository's purpose is to just contain all the projects I did on my way.
 
-## Recommendations are appreciated 
+## My current goals to get into this field.
+
+- [] Python - Advanced
+- [x] Networking
+- [] C and C++
+- [] sql and js
+
+### Recommendations are appreciated.
 
 Any recommendations about topics or courses or anything in general which could help me are always welcome.
 
-You can contact me through my socials: https://linktr.ee/mnvndraah/
+You can contact me through my [Socials](https://linktr.ee/mnvndraah/)
