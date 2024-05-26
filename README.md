@@ -1,6 +1,6 @@
 # Welcome to my collection of projects
 
-This repository's purpose is to just contain all teh projects I did on my way.
+This repository's purpose is to just contain all the projects I did on my way.
 
 ## Recommendations are appreciated 
 
