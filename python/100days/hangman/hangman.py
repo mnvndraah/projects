@@ -30,8 +30,12 @@ while running:
         print(f"[!] You guessed an incorrect letter. You lose a life. {lives} left")
 
     if "_" not in display:
+        print(f" ".join(display))
+        print(stages[lives])
         print("[~] You win.")
-        running = False
+        print(f"[-] Exitting in 10 seconds. ")
+        sleep(10)
+        exit()
 
     if lives == 0:
         running == False
