@@ -1,44 +1,49 @@
 from random import choice
+from styles import stages, logo
 from time import sleep
-from art import stages, logo
+from sys import exit
 import words
 
 print(logo)
-word = choice(words.word)
-len_word = len(word)
-display = ["_" for _ in word]
-running = True
+
+word = (choice(words.word)).lower()
+display = []
+length = len(word)
 lives = 6
+game_end = False
 
-while running:
-    guess = input("[+] Guess a letter: ").lower()
+for _ in word:
+    display.append("_")
 
-    if guess in display:
-        print("[!] You already guessed that.")
+# Creating a while loop which runs till the game has not ended
+while not game_end:
+
+    guess = input("\n[+] Guess a letter: ")
 
     if guess in word:
-        for index in range(len_word):
-            if word[index] == guess:
-                display[index] = guess
-    else:
+        print("\n[!] You have already guessed that word. Please try again.")
+
+    for position in range(length):
+        if word[position] == guess:
+            display[position] = guess # Replaces "_" at that index with the letter guessed
+
+
+    if guess not in word: # When incorrect 
         lives -= 1
-        print(f"[!] You guessed an incorrect letter. You lose a life. {lives} left")
-
-    if "_" not in display:
-        print(" ".join(display))
-        print(stages[lives])
-        print("[~] You win.")
-        running = False
-
-    if lives == 0:
-        print(" ".join(display))
-        print(stages[lives])
-        print(f"[~] You lose. The word was \"{word}\".")
-        running = False
+        print(f"\nThe letter you guessed was incorrect. You now have {lives} out of 6 lives")
     
-    print(" ".join(display))
+    if "_" not in display:
+        print("\n[~] You win!!!")
+        game_end = True
+    
+    if lives == 0:
+        print("\n[~] You lose!!!")
+        game_end = True
+    
+    print("\n" + " ".join(display))
     print(stages[lives])
 
-if not running:
-    print("[-] Exiting in 10 seconds.")
-    sleep(10)
+    if game_end == True:
+        print("[!] Exitting in 10 seconds. Thank You for playing.")
+        sleep(10)
+        exit() # Using sys because after compiling to .exe the simple exit() command throws an error

@@ -1,4 +1,4 @@
-w = """able
+w = '''able
 about
 account
 acid
@@ -851,6 +851,9 @@ you
 young
 Bernhard
 Breytenbach
-Android"""
+Android'''
 
 word = w.split("\n")
+
+# the variable w is a single string therefor it is choosing only one random letter to avoid it we can use split
+# split is now converting the string to a list breaking from every \n 
