@@ -6,8 +6,6 @@ int main(){
     // float myScore = 93.6;
 
     printf("Hi, I am %s and my age is %d.\n", myName, myAge);
-    
-    
-
-   return 0; 
+ 
+    return 0; 
 }
